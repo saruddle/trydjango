@@ -45,6 +45,7 @@
     <Compile Include="trydjango\__init__.py" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="static\" />
     <Folder Include="staticfiles\" />
     <Folder Include="pages\static\" />
     <Folder Include="pages\static\pages\" />
@@ -114,6 +115,7 @@
     <Content Include="pages\static\pages\scripts\respond.min.js" />
     <Content Include="runtime.txt" />
     <Content Include="staticfiles\tempfile.js" />
+    <Content Include="static\tempfile2.css" />
     <None Include="pages\static\pages\scripts\_references.js" />
     <None Include="pages\static\pages\scripts\jquery.validate-vsdoc.js" />
     <None Include="pages\static\pages\scripts\jquery-1.10.2.intellisense.js" />
