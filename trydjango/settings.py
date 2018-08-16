@@ -31,7 +31,7 @@ DEBUG = False
 
 
 # The 'local' might work for local runserver but if not use [] for ALLOWED_HOSTS
-ALLOWED_HOSTS = ['great-american.herokuapp.com', '*/great-american.herokuapp.com', 'trydjango.herokuapp.com' 'local']
+ALLOWED_HOSTS = ['great-american.herokuapp.com']
 
 
 # Application definition
