@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 # Suggested by Heroku
-import django_heroku
+#import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -37,6 +37,7 @@ ALLOWED_HOSTS = ['great-american.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -162,4 +163,4 @@ EMAIL_USE_TLS = False
 EMAIL_PORT = 1025
 
 # Suggested by Heroku
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
