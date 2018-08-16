@@ -1,4 +1,4 @@
-﻿{% extends "app/layoutBS.cshtml" %}
+﻿{% extends "base.html" %}
 
 {% block nav_resources %}
     style="background-color: #e6e8ed;"
@@ -17,7 +17,7 @@
                     <strong>Resources</strong>
                 </h2>
                 <hr>
-                <img class="img-responsive img-border" src="{% static 'app/img/resources.jpg' %}" alt="">
+                <img class="img-responsive img-border" src="{% static 'pages/img/resources.jpg' %}" alt="">
             </div>
         </div>
     </div>
@@ -62,8 +62,8 @@
                     If your pet has no signs of illness or digestive difficulties such as loose stools, constipation or occasional vomiting, then you may be able to transition them in 5-7 days.
                     This gradual transition aids in helping your pet’s gastrointestinal system adapt to the new meals.
                 </p>
-                <a href="{% static 'app/img/GANPFTransition.pdf' %}">
-                    <img class="img-responsive img-border" src="{% static 'app/img/GANPFTransition.jpg' %}" alt="" style="margin-bottom: 25px; margin-top: 25px;">
+                <a href="{% static 'pages/img/GANPFTransition.pdf' %}">
+                    <img class="img-responsive img-border" src="{% static 'pages/img/GANPFTransition.jpg' %}" alt="" style="margin-bottom: 25px; margin-top: 25px;">
                 </a>
                 <ul class="ul-index">
                     <li>Day 1 - Begin by substituting 1⁄8th Great American Natural Pet Food (GANPF) for your pet’s current food.</li>

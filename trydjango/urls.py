@@ -1,9 +1,6 @@
 from datetime import datetime
 from django.conf.urls import url
-import django.contrib.auth.views
-
-import pages.forms
-import pages.views
+from pages.views import home, blog, about, products, resources, contact
 
 # Uncomment the next lines to enable the admin:
 # from django.conf.urls import include
@@ -11,30 +8,13 @@ import pages.views
 # admin.autodiscover()
 
 urlpatterns = [
-    url(r'^$', app.views.home, name='home'),
-    url(r'^blog$', app.views.blog, name='blog'),
-    url(r'^resources$', app.views.resources, name='resources'),
-    url(r'^products$', app.views.products, name='products'),
-    url(r'^contact$', app.views.contact, name='contact'),
-    url(r'^about', app.views.about, name='about'),
-    url(r'^login/$',
-        django.contrib.auth.views.login,
-        {
-            'template_name': 'app/login.html',
-            'authentication_form': app.forms.BootstrapAuthenticationForm,
-            'extra_context':
-            {
-                'title': 'Log in',
-                'year': datetime.now().year,
-            }
-        },
-        name='login'),
-    url(r'^logout$',
-        django.contrib.auth.views.logout,
-        {
-            'next_page': '/',
-        },
-        name='logout'),
+    url(r'^$', home, name='home'),
+    url(r'^blog$', blog, name='blog'),
+    url(r'^resources$', resources, name='resources'),
+    url(r'^products$', products, name='products'),
+    url(r'^contact$', contact, name='contact'),
+    url(r'^about$', about, name='about'),
+    ]
 
 
 #"""trydjango URL Configuration

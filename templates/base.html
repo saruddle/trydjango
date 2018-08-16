@@ -10,8 +10,8 @@
     <title>{{ title }}</title>
     <!-- Bootstrap core CSS -->
     {% load staticfiles %}
-    <link href= "{% static 'content/bootstrap.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'content/business-casual.css' %}" rel="stylesheet" type="text/css">
+    <link href= "{% static 'pages/content/bootstrap.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'pages/content/business-casual.css' %}" rel="stylesheet" type="text/css">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -78,8 +78,8 @@
     </footer>
 
     {% block scripts %}
-    <script src="{% static 'scripts/jquery-1.10.2.js' %}"></script>
-    <script src="{% static 'scripts/bootstrap.js' %}"></script>
+    <script src="{% static 'pages/scripts/jquery-1.10.2.js' %}"></script>
+    <script src="{% static 'pages/scripts/bootstrap.js' %}"></script>
     <script src="{% static 'scripts/respond.js' %}"></script>
     {% endblock %}
 </body>

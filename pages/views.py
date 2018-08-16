@@ -1,7 +1,3 @@
-"""
-Definition of views.
-"""
-
 from django.shortcuts import render
 from django.http import HttpRequest
 from django.template import RequestContext
@@ -11,7 +7,8 @@ from django.core.mail import EmailMessage
 from django.shortcuts import redirect
 from django.template.loader import get_template
 from django.contrib import messages
-from templates import *
+
+
 
 def home(request):
     """Renders the home page."""
@@ -76,7 +73,7 @@ def contact(request):
             # Email the profile with the
             # contact information
 
-            template = get_template('templates/contact_template.txt')
+            template = get_template('contact_template.txt')
             context = {'contact_name': contact_name,
                        'contact_email': contact_email,
                        'contact_phone': contact_phone,
