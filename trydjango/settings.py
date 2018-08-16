@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+# Suggested by Heroku
 import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -22,11 +23,14 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# Change back to non environ key when local
 SECRET_KEY = os.environ.get('SECRET_KEY', '+40r-j@2523jhgfftp_4@+re-x-nctcav2o&8re%f*^qbz-iv')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+
+# The 'local' might work for local runserver but if not use [] for ALLOWED_HOSTS
 ALLOWED_HOSTS = ['great-american.herokuapp.com', 'local']
 
 
@@ -120,6 +124,16 @@ USE_L10N = True
 
 USE_TZ = True
 
+# Production settings...comment out when local
+CORS_REPLACE_HTTPS_REFERER      = True
+HOST_SCHEME                     = "https://"
+SECURE_PROXY_SSL_HEADER         = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT             = True
+SESSION_COOKIE_SECURE           = True
+CSRF_COOKIE_SECURE              = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS  = True
+SECURE_HSTS_SECONDS             = 1000000
+SECURE_FRAME_DENY               = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
@@ -131,6 +145,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+# Email settings required for contact page form to send auto generated form email to info@greatamericannaturalpetfood.com 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'info@greatamericannaturalpetfood.com'
 EMAIL_HOST_USER = ''
@@ -138,4 +153,5 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
 EMAIL_USE_TLS = False
 EMAIL_PORT = 1025
 
+# Suggested by Heroku
 django_heroku.settings(locals())
