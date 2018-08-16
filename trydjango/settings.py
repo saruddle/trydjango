@@ -11,8 +11,8 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-## Suggested by Heroku
-#import django_heroku
+# Suggested by Heroku
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -137,13 +137,13 @@ SECURE_FRAME_DENY               = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
-# Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+## Extra places for collectstatic to find static files.
+#STATICFILES_DIRS = (
+#    os.path.join(BASE_DIR, 'static'),
+#)
 
 # Email settings required for contact page form to send auto generated form email to info@greatamericannaturalpetfood.com 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -154,4 +154,4 @@ EMAIL_USE_TLS = False
 EMAIL_PORT = 1025
 
 # Suggested by Heroku
-#django_heroku.settings(locals())
+django_heroku.settings(locals())
