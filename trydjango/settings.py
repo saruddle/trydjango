@@ -27,7 +27,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = os.environ.get('SECRET_KEY', '+40r-j@2523jhgfftp_4@+re-x-nctcav2o&8re%f*^qbz-iv')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 # The 'local' might work for local runserver but if not use [] for ALLOWED_HOSTS
