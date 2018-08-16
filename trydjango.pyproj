@@ -45,6 +45,8 @@
     <Compile Include="trydjango\__init__.py" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="staticfiles\media-root\" />
+    <Folder Include="staticfiles\static-root\" />
     <Folder Include="static\" />
     <Folder Include="staticfiles\" />
     <Folder Include="pages\static\" />
