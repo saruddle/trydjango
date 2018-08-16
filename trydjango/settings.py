@@ -137,13 +137,13 @@ SECURE_FRAME_DENY               = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 ## Extra places for collectstatic to find static files.
-#STATICFILES_DIRS = (
-#    os.path.join(BASE_DIR, 'static'),
-#)
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 # Email settings required for contact page form to send auto generated form email to info@greatamericannaturalpetfood.com 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
