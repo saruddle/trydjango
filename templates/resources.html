@@ -176,10 +176,59 @@
                     When it comes to feeding your cat, the amount of food they need depends on their size, weight, and activity level. 
                     Adult cats should typically eat 4-6 ounces per day, so one GANPF tub will feed your cat for approximately 5-7 days. Since the activity level of a cat can vary depending on their personality, we suggest that you monitor your cat’s weight and adjust the amount accordingly.
                 </p>
+                <hr>
+                <h6 class="text-center">
+                    Serving Size Calculator
+                </h6>
+                <p class="text-center">
+                    If you would like help figuring out exactly how much to feed your pet please click, below, and use our handy serving size calculator.
+                </p>
+                <div class="text-center">
+                    <button type="button" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#calculator">Launch Calculator</button>
+                </div>
+                <!-- Modal Dialog - Calculator-->
+                <div class="modal fade" id="calculator" tabindex="-1" role="dialog" aria-labelledby="myModal-label">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title text-center" id="calculator-label">Great American Natural Pet Food Serving Size Calculator</h4>
+                      </div>
+                      <div class="modal-body">
+                        <p>To calculate your pet's daily serving size simply enter your pet's weight, below:</p>
+                        <form class="form-horizontal" role="form" oninput="x.value=parseInt(weight.value)*.02, y.value=parseInt(weight.value)*.02*16">
+                          <div class="form-group" style="margin-left: 4px; margin-right: 4px;">
+                            <label class="control-label" for="weight">Pet's Weight: </label>
+                            <div>
+                              <input type="number" class="form-control" id="weight" placeholder="Enter your pet's weight">
+                            </div>
+                            <label class="control-label" for="pounds">Pounds/day: </label>
+                            <div>
+                              <output name="x" type="number" class="form-control" for="weight" id="pounds" default=""></output>
+                            </div>
+                            <label class="control-label" for="ounces">Ounces/day: </label>
+                            <div>
+                              <output name="y" type="number" class="form-control" for="weight" id="ounces" default=""></output>
+                            </div>
+                            <div>
+                              <small>This is the base amount for an ADULT pet.  Puppies and pregnant or nursing moms should be given up to twice as much.
+                              Older or less active pets should get slightly smaller portions.
+                              </small>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close Calculator</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
         </div>
     </div>
-
+    <script src="../pages/static/pages/scripts/jquery-1.10.2.min.js"></script>
+    <script src="../pages/static/pages/scripts/bootstrap.min.js"></script>
 </div>
 
 {% endblock %}
