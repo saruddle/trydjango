@@ -81,6 +81,8 @@
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
     <Content Include="db.sqlite3" />
+    <Content Include="pages\static\pages\img\pasteur.jpg" />
+    <Content Include="pages\static\pages\img\sevenDogs.jpg" />
     <Content Include="Procfile" />
     <Content Include="requirements.txt" />
     <Content Include="pages\static\pages\content\bootstrap-theme.css" />
