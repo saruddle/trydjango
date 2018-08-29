@@ -192,11 +192,12 @@
                     <div class="modal-content">
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title text-center" id="calculator-label">Great American Natural Pet Food Serving Size Calculator</h4>
+                        <h4 class="modal-title text-center" id="calculator-label">Great American Natural Pet Food</h4>
+                        <h5 class="modal-title text-center">Serving Size Calculator</h5>
                       </div>
                       <div class="modal-body">
                         <p>To calculate your pet's daily serving size simply enter your pet's weight, below:</p>
-                        <form class="form-horizontal" role="form" oninput="x.value=parseInt(weight.value)*.02, y.value=parseInt(weight.value)*.02*16">
+                        <form class="form-horizontal" role="form" oninput="x.value=(parseInt(weight.value)*.02 || 0), (y.value=parseInt(weight.value)*.02*16 || 0)">
                           <div class="form-group" style="margin-left: 4px; margin-right: 4px;">
                             <label class="control-label" for="weight">Pet's Weight: </label>
                             <div>
