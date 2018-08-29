@@ -26,7 +26,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = os.environ.get('SECRET_KEY', '+40r-j@2523jhgfftp_4@+re-x-nctcav2o&8re%f*^qbz-iv')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 # The 'local' might work for local runserver but if not use [] for ALLOWED_HOSTS
@@ -128,15 +128,15 @@ USE_L10N = True
 USE_TZ = True
 
 # Production settings...comment out when local
-#CORS_REPLACE_HTTPS_REFERER      = True
-#HOST_SCHEME                     = "https://"
-#SECURE_PROXY_SSL_HEADER         = ('HTTP_X_FORWARDED_PROTO', 'https')
-#SECURE_SSL_REDIRECT             = True
-#SESSION_COOKIE_SECURE           = True
-#CSRF_COOKIE_SECURE              = True
-#SECURE_HSTS_INCLUDE_SUBDOMAINS  = True
-#SECURE_HSTS_SECONDS             = 1000000
-#SECURE_FRAME_DENY               = True
+CORS_REPLACE_HTTPS_REFERER      = True
+HOST_SCHEME                     = "https://"
+SECURE_PROXY_SSL_HEADER         = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT             = True
+SESSION_COOKIE_SECURE           = True
+CSRF_COOKIE_SECURE              = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS  = True
+SECURE_HSTS_SECONDS             = 1000000
+SECURE_FRAME_DENY               = True
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
