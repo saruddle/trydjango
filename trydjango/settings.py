@@ -30,7 +30,7 @@ DEBUG = False
 
 
 # The 'local' might work for local runserver but if not use [] for ALLOWED_HOSTS
-ALLOWED_HOSTS = ['great-american.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['great-american.herokuapp.com', 'localhost', 'www.greatamericannaturalpetfood.com', 'greatamericannaturalpetfood.com']
 
 
 # Application definition
