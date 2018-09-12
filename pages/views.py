@@ -17,7 +17,7 @@ def home(request):
         request,
         'index.html',
         {
-            'title':'Home Page',
+            'title':'Natural Raw Pet Food | Great American Natural Pet Food',
             'year':datetime.now().year,
         }
     )
@@ -41,7 +41,7 @@ def resources(request):
         request,
         'resources.html',
         {
-            'title':'Resources',
+            'title':'Resources for Natural Raw Pet Food | Great American Natural Pet Food',
             'year':datetime.now().year,
         }
     )
@@ -53,7 +53,7 @@ def products(request):
         request,
         'products.html',
         {
-            'title':'Products',
+            'title':'Natural Raw Pet Food Products | Great American Natural Pet Food',
             'year':datetime.now().year,
         }
     )
@@ -91,7 +91,7 @@ def contact(request):
         request,
         'contact.html',
         {
-            'title':'Contact',
+            'title':'Contact Great American Natural Pet Food',
             'message':'Your contact page.',
             'year':datetime.now().year,
             'form': form_class,
@@ -105,7 +105,7 @@ def about(request):
         request,
         'about.html',
         {
-            'title':'About',
+            'title':'About Great American Natural Pet Food',
             'message':'Your application description page.',
             'year':datetime.now().year,
         }
